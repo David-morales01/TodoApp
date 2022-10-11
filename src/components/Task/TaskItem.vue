@@ -14,6 +14,7 @@ const props = defineProps({
 });
 const completed_at = ref(props.task.completed_at)
 const form = reactive({
+  id: props.task.id,
   description: props.task.description
 })
 

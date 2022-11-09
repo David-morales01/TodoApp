@@ -81,7 +81,7 @@ const changeComplete = () => {
       </template>
     </form>
     <div class="px-2 h-4 text-xl" v-if="completed_at"> 
-      Task completed: <span class="ml-2 text-sm">{{completed_at}}</span>
+      Task completed:<br/> <span class="ml-2 text-sm">{{completed_at}}</span>
     </div>
   </div>
 </template> 

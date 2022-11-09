@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import {ref } from "vue"
 import axios from 'axios'
 
-axios.defaults.baseURL = "http://localhost:8000/api/"
+axios.defaults.baseURL = `${import.meta.env.VITE_REACT_APP_API_URL}`
 
 export const useTaskStore = defineStore('store', () => { 
   const taskList = ref(false) 

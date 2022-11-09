@@ -42,7 +42,7 @@ const changeComplete = () => {
 
 <template>
   <div
-    class="bg-yellow-200 overflow-hidden h-72 cursor-pointer shadow-2xl w-40 pb-2  break-all transition rounded-md ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+    class="bg-yellow-200 overflow-hidden h-72 cursor-pointer shadow-2xl w-60 pb-2  break-all transition rounded-md ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
     <form class="overflow-auto w-full" @submit.prevent="updateTaskForm(form)">
       <div class="flex justify-end pr-2  w-full h-8 mb-6 text-2xl bg-amber-200">
         <div v-if="formState" class="flex">

@@ -16,14 +16,18 @@ store.getTask()
 </script>
 
 <template>
+  <div class="min-w-[300px]">
   <Header /> 
   <div class="grid w-100 mx-10 my-6 ">
     <button @click="changeStateModal(null)" class="justify-self-end hover:scale-110 shadow-2xl bg-sky-500/100 rounded-lg text-white p-2">New Task</button>
   </div>
-  <div class="flex w-100 flex-wrap gap-6 justify-between mx-10 my-10" v-if="store.taskList">
+  <div class="flex w-100 flex-wrap gap-6 justify-around md:justify-between mx-4 md:mx-10 my-10" v-if="store.taskList">
     <TaskItem v-for="task in store.taskList" :key="task.id" :task="task"/>
   </div>
   <Loading v-else />
-  <Modal v-show="store.modal"/>
+  <template  v-if="store.modal">
+    <Modal/>
+  </template>
   <ModalError v-show="store.error" />
+</div>
 </template> 
